@@ -61,6 +61,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    
+    .state('tab.digitalProducts', {
+      url: '/digitalProducts',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/digitalProducts.html',
+          controller: 'DigitalProductsCtrl'
+        }
+      }
+    })
 
     .state('tab.account', {
       url: '/account',

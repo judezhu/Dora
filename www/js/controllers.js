@@ -3,6 +3,12 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope) {
 })
 
+.controller('DigitalProductsCtrl', function($scope) {
+})
+
+.controller('WishListCtrl', function($scope) {
+})
+
 .controller('FriendsCtrl', function($scope, Friends) {
   $scope.friends = Friends.all();
 })

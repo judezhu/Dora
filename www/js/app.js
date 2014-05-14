@@ -71,6 +71,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    
+    .state('tab.wishList', {
+      url: '/wishList',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/wishList.html',
+          controller: 'WishListCtrl'
+        }
+      }
+    })
 
     .state('tab.account', {
       url: '/account',

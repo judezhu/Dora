@@ -1,3 +1,7 @@
+.classpath
+WebContent/*
+.project
+.settings/*
 node_modules/
 platforms/*
 plugins/*

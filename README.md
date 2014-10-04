@@ -1,5 +1,11 @@
-Ionic App Base
+# Dora
 =====================
+
+Dora is the project to help you exchang things with the world.
+
+Based @ionic framework.
+
+Feature one: Add side menu.
 
 A starting project for Ionic that optionally supports
 using custom SCSS.

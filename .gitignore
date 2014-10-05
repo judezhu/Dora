@@ -1,9 +1,8 @@
 .classpath
-WebContent/*
+/WebContent
 .project
 .settings/*
 node_modules/
-platforms/*
-plugins/*
 /build
 /bower_components
+/platforms

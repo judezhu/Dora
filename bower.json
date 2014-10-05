@@ -1,0 +1,22 @@
+{
+  "name": "Dora",
+  "version": "0.0.0",
+  "homepage": "https://github.com/judezhu/Dora",
+  "authors": [
+    "jude <judezhu.hust@gmail.com>"
+  ],
+  "description": "exchange things with the world.",
+  "main": "www/index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0-beta.13"
+  }
+}

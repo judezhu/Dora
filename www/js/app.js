@@ -5,10 +5,18 @@
 //the 2nd parameter is an array of 'requires'
 //'starter.services' is found in services.js
 //'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+//angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
 	$ionicPlatform.ready(function() {
+		
+	    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+	    // for form inputs)
+	    if(window.cordova && window.cordova.plugins.Keyboard) {
+	      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+	    }
+
 		if(window.StatusBar) {
 			// org.apache.cordova.statusbar required
 			StatusBar.styleDefault();
@@ -23,94 +31,38 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 	// Set up the various states which the app can be in.
 	// Each state's controller can be found in controllers.js
 	$stateProvider
+	
+    .state('menu', {
+        url: "/menu",
+        abstract: true,
+        templateUrl: 'templates/menu.html',
+        controller: 'AppCtrl'
+      })
 
-	// setup an abstract state for the tabs directive
-	.state('tab', {
-		url: "/tab",
-		abstract: true,
-		templateUrl: "templates/tabs.html"
-	})
-
-	// Each tab has its own nav history stack:
-
-	.state('tab.dash', {
-		url: '/dash',
+	.state('menu.item-list', {
+		url: '/item-list',
 		views: {
-			'tab-dash': {
-				templateUrl: 'templates/tab-dash.html',
-				controller: 'DashCtrl'
+			'menuContent': {
+				templateUrl: 'templates/item-list.html',
+				controller: 'itemListCtrl'
 			}
 		}
 	})
 
-	.state('tab.friends', {
-		url: '/friends',
-		views: {
-			'tab-friends': {
-				templateUrl: 'templates/tab-friends.html',
-				controller: 'FriendsCtrl'
-			}
-		}
-	})
-	.state('tab.friend-detail', {
-		url: '/friend/:friendId',
-		views: {
-			'tab-friends': {
-				templateUrl: 'templates/friend-detail.html',
-				controller: 'FriendDetailCtrl'
-			}
-		}
-	})
-
-	.state('tab.digitalProducts', {
-		url: '/digitalProducts',
-		views: {
-			'tab-dash': {
-				templateUrl: 'templates/digitalProducts.html',
-				controller: 'DigitalProductsCtrl'
-			}
-		}
-	})
-
-	.state('tab.wishList', {
-		url: '/wishList',
-		views: {
-			'tab-dash': {
-				templateUrl: 'templates/wishList.html',
-				controller: 'WishListCtrl'
-			}
-		}
-	})
-
-	.state('tab.account', {
+	.state('menu.account', {
 		url: '/account',
 		views: {
-			'tab-account': {
-				templateUrl: 'templates/tab-account.html',
-				controller: 'AccountCtrl'
+			'menuContent': {
+				templateUrl: 'templates/account.html',
+				controller: 'accountCtrl'
 			}
 		}
-	})
+	});
 
 	// if none of the above states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/tab/dash');
+	$urlRouterProvider.otherwise('/menu/item-list');
 
 })
-.directive('dragBack', function($ionicGesture, $state) {
-	return {
-		restrict : 'A',
-		link : function(scope, elem, attr) {
 
-			$ionicGesture.on('swipe', function(event) {
-
-				console.log('Got swiped!');
-				event.preventDefault();
-				window.history.back();
-
-			}, elem);
-
-		}
-	}  
-})
 ;
 

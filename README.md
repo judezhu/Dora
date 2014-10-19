@@ -15,16 +15,16 @@ Prerequisite
 =============
 1. Install node.js, npm
 
-    sudo apt-get install node
-    sudo apt-get install npm
+        sudo apt-get install node
+        sudo apt-get install npm
 
 2. Install ionic
-    npm install -g ionic
+        npm install -g ionic
 
 3. Upgrade ionic to the latest version
 
-4. Create a map based ionic seed project
-    ionic
+4. Create a google map based ionic seed project
+        ionic start <your-app-name> maps
 
 =================
 Working enviroment

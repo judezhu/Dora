@@ -13,14 +13,39 @@ Exchange things within your neighborhood. Each item has its own story!
 =============
 Prerequisite
 =============
-Todo
+1. Install node.js, npm
+
+    sudo apt-get install node
+    sudo apt-get install npm
+
+2. Install ionic
+    npm install -g ionic
+
+3. Upgrade ionic to the latest version
+
+4. Create a map based ionic seed project
+    ionic
+
+=================
+Working enviroment
+==================
+1. Current Eclipse
+
+===============
+Test
+===============
+
+
 
 
 =============
-Installation
+Deploy
 =============
-Todo
+1. Add platform
+    ionic platform add android
 
+2. Build project for andorid platform
+    ionic build android
 
 =============
 Bugs

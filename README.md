@@ -19,22 +19,26 @@ Prerequisite
         sudo apt-get install npm
 
 2. Install ionic
+
         npm install -g ionic
 
 3. Upgrade ionic to the latest version
 
 4. Create a google map based ionic seed project
+
         ionic start <your-app-name> maps
 
 =================
 Working enviroment
 ==================
-1. Current Eclipse
+1. Current use Eclipse
 
 ===============
 Test
 ===============
+1. enter into your project folder
 
+        ionic serve
 
 
 
@@ -42,10 +46,12 @@ Test
 Deploy
 =============
 1. Add platform
-    ionic platform add android
+
+        ionic platform add android
 
 2. Build project for andorid platform
-    ionic build android
+
+        ionic build android
 
 =============
 Bugs
